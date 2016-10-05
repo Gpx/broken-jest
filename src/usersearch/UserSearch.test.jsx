@@ -1,3 +1,3 @@
-import UserSearch from './UserSearch'
+import UserSearch from './UserSearch';
 
-test('something', () => {})
+test('something', () => {});

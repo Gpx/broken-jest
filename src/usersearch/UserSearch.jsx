@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class UserSearch extends Component {
   render () {
     switch(this.props.type) {
       case 'a':
-        return <div />
+        return <div />;
       default:
-        return <p />
+        return <p />;
     }
   }
 }
 
-export default UserSearch
+export default UserSearch;
