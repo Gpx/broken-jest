@@ -1,0 +1,155 @@
+/* TK Variables */
+@import "../styles/variables.pcss";
+
+.UserSearch {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.UserSearch-Heading {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  > div {
+    min-height: 4rem;
+    padding-bottom: 1rem;
+    border: 0;
+  }
+
+  .UserSearch-RegisterNew {
+    padding: 0 1.6rem;
+    float: right;
+    line-height: 3.8rem;
+  }
+
+  .Table-Label {
+    color: $cGray600;
+  }
+
+  .Table-Text,
+  .Table-Label {
+    line-height: 4rem;
+  }
+}
+
+.UserSearch-Input {
+  position: relative;
+
+  .Button {
+    float: left;
+    margin-right: 1rem;
+
+    .Icon {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  .form-group {
+    float: right;
+    width: calc(100% - 5rem);
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:not(:focus) {
+      border-color: transparent;
+    }
+
+    &:focus {
+      padding-left: 1rem;
+    }
+  }
+
+  .UserSearch-Clear {
+    position: absolute;
+    top: 1.4rem;
+    right: 1.1rem;
+    z-index: 10;
+
+    font-size: 1.2rem;
+    color: $cGray700;
+    transition: transform .3s $bezier, opacity .25s $bezier;
+    opacity: 0;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  &.UserSearch--withClear {
+    .UserSearch-Clear {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .form-control {
+      padding-right: 3rem !important;
+    }
+  }
+}
+
+.UserSearch-Result {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 1.1rem;
+  padding-bottom: 1.6rem;
+  border-top: 1px solid $cGray400;
+
+  .Table-Avatar {
+    float: left;
+    margin-right: 1rem;
+    padding-top: .8rem;
+  }
+
+  > div {
+    &:first-child .Table-Label {
+      width: calc(100% - 6rem);
+      //float: right;
+    }
+  }
+
+  &--Active {
+    .Table-Label {
+      color: $cBlue800;
+    }
+  }
+
+  &:hover {
+    background: $cBlue300;
+    cursor: pointer;
+
+    .Table-Label {
+      color: $cBlue800;
+    }
+  }
+
+
+  &:last-child {
+    td {
+      border-bottom-color: $cGray400;
+    }
+  }
+
+  .Table-Label {
+    padding-top: 0.5rem;
+    color: $cGray800;
+  }
+}
+
+.Table-Label, .Table-Text {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: $fwRegular;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &.Label--small {
+    font-size: 1.4rem;
+    padding-top: 0;
+  }
+}
